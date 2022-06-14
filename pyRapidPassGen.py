@@ -34,8 +34,7 @@ if user_option == "y":
             print(password)
 
         print("\nGenerating passwords...\n")
-        for i in range(number_pass):
-            password_gen()
+        [password_gen() for i in range(number_pass)]
         print("\npyRapidPassGen task completed.")
 
         restart = input("\nRestart pyRapidPassGen? (y/n): ")  # Restart option
