@@ -21,7 +21,8 @@ if user_option == "y":
         except Exception:
             error_message()
 
-        def password_gen():  # Generator
+        print("\nGenerating passwords...\n")  # Generator
+        for i in range(number_pass):
             CHARACTERS = (ascii_letters, digits, punctuation)
             try:
                 if special_chars == "y":
@@ -33,12 +34,8 @@ if user_option == "y":
                 error_message()
             print(password)
 
-        print("\nGenerating passwords...\n")
-        [password_gen() for i in range(number_pass)]
-        print("\npyRapidPassGen task completed.")
-
-        restart = input("\nRestart pyRapidPassGen? (y/n): ")  # Restart option
-        user_config() if restart == "y" else quit("pyRapidPassGen closing...")
+        restart = input("\npyRapidPassGen task complete.\n\nRestart? (y/n): ")
+        user_config() if restart == "y" else quit()
 
     user_config()
 else:
