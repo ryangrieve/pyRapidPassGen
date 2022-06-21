@@ -27,10 +27,9 @@ def user_config():
                 x = CHARACTERS
             elif special_chars == "n":
                 x = CHARACTERS[0:1]
-            password = "".join(choice("".join(x)) for i in range(chars))
+            print("".join(choice("".join(x)) for i in range(chars)))
         except Exception:
             error_message()
-        print(password)
 
     user_config() if input(  # Optional restart
         "\npyRapidPassGen task complete.\n\nRestart? (y/n): "
